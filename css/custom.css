@@ -1,7 +1,6 @@
 /*
 			General
 --------------------------------- */
-
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +13,7 @@
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
 
 /* Fonts */
 
@@ -34,9 +34,8 @@ body{
 	color: #f05f40;
 }
 
-/* Fixes */
-.divider{
-	height: 10%;
+.bg-orange{
+  background-color: #f05f40;
 }
 
 .center{
@@ -190,20 +189,21 @@ fieldset {
 			Footer
 ----------------------------------- */
 
+footer{
+  padding: 5% 2%;
+}
+
 /*
       Features
 ------------------------------------- */
-.accordion-spacing-top{
+.accordion-container{
+  background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 }
 
-.accordion-spacing-bottom{
+.ziehharmonika img{
+  max-width: 100%;
 }
 
-.accordion-wrapper{
-}
-
-.desktop-accordion{
-}
-
-.mobile-accordion{
+section {
+    padding: 3.5rem 0;
 }
