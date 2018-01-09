@@ -186,19 +186,24 @@ fieldset {
 			Portfolio
 ---------------------------------------- */
 
-.portfolio-intro{
-	padding: 5%;
-}
-
-.portfolio-intro h2{
-	text-transform: uppercase;
-	font-size: 250%;
-}
-
 /*
 			Footer
 ----------------------------------- */
 
-footer{
-	padding: 5%;
+/*
+      Features
+------------------------------------- */
+.accordion-spacing-top{
+}
+
+.accordion-spacing-bottom{
+}
+
+.accordion-wrapper{
+}
+
+.desktop-accordion{
+}
+
+.mobile-accordion{
 }
