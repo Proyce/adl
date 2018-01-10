@@ -70,6 +70,10 @@ section {
   color: #777;
 }
 
+.contactFormFormWrapper form{
+  border-radius: 5%;
+}
+
 #contactForm input[type="text"],
 #contactForm input[type="email"],
 #contactForm input[type="tel"],
