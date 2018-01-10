@@ -42,6 +42,10 @@ body{
 	margin: auto;
 }
 
+section {
+    padding: 4rem 0;
+}
+
 
 /*
 			Homepage
@@ -198,14 +202,18 @@ footer{
 ------------------------------------- */
 .accordion-container{
   background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-  padding: 2% 5%;
-  border-radius: 3%;
+  padding: 2% 3%;
+  border-radius: 2.5%;
+}
+
+#services .container, #services .row{
+  padding: 0;
+}
+
+.ziehharmonika{
+  width: 100%;
 }
 
 .ziehharmonika img{
   max-width: 100%;
-}
-
-section {
-    padding: 3.5rem 0;
 }
