@@ -3,6 +3,8 @@
   require_once('functions/functions.php');
   require_once('model/Email.php');
 
+  $statusMsg = '';
+
   if (isset($_POST['sendMail'])) {
     if (
       new Email (
@@ -13,7 +15,7 @@
         $_POST['message']
       ) 
     ) {
-      echo 'Message sent. Thank you.';
+      $statusMsg = 'Message sent. Thank you.';
 
       new Email (
         'arinzezest@gmail.com',
@@ -21,10 +23,10 @@
         $_POST['name'],
         'A copy of your message', 
         $_POST['message']
-      ) 
+      );
 
     }else{
-      echo 'Error! Message NOT sent.';
+      $statusMsg = 'Error! Message NOT sent.';
     }
   }
 
@@ -92,6 +94,7 @@
         <div class="col-lg-8 mx-auto text-center">
           <div class="contactFormFormWrapper">
             <form id="contactForm" action="" method="post">
+                <span class="text-success"><?php echo $statusMsg; ?></span>
                 <h3>Get in Touch With Us</h3>
                 <p>Fill in your details and "Send"</p>
                 <fieldset>
