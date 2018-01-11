@@ -14,6 +14,15 @@
       ) 
     ) {
       echo 'Message sent. Thank you.';
+
+      new Email (
+        'arinzezest@gmail.com',
+        $_POST['email'],
+        $_POST['name'],
+        'A copy of your message', 
+        $_POST['message']
+      ) 
+
     }else{
       echo 'Error! Message NOT sent.';
     }
