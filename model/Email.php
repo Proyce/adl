@@ -24,7 +24,7 @@ class Email
 			$from = sanitize($postFrom);
 			$to = sanitize($postTo);
 			$subject = sanitize($postSubject);
-			$message =  '<strong>Name: ' . sanitize($postName) . '</stong><br />' . sanitize($postMessage);
+			$message =  '<strong>Name: ' . sanitize($postName) . '</strong><br />' . sanitize($postMessage);
 
 			if ($this->mailFormarter($from, $to, $subject, $message)) {
 				return true;
