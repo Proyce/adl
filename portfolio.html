@@ -11,22 +11,61 @@
     <title>Portfolio | AdLineup</title>
     <!-- #IE HTML5 fix ================================--><!--[if IE]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-    <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-    <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="css/custom.min.css" rel="stylesheet">
+    <link href="accordion/src/ziehharmonika.css" rel="stylesheet" type="text/css">
     <link href="css/custom.css" rel="stylesheet">
 
-    <link href="accordion/src/ziehharmonika.css" rel="stylesheet" type="text/css">
+    <style>
+            /*
+          Accordion content slider. Yet to find CSS 
+          overrifing this when placed in the CSS file
+      ---------------------------------------------- */
+      .zest-slide .hide{
+          display: none;
+      }
+      .zest-slide .show{
+          display: block;
+      }
+      .zest-slide{
+        position: relative;
+        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        max-width: 100%;
+        margin: auto;
+        text-align: center;
+        padding: 5% 2%;
+      }
+
+      .zest-slide img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .zest-slide #btnPrev{
+        position: absolute;
+        top: 50%;
+        left: 0.5%;
+      }
+
+      .zest-slide #btnNext{
+        position: absolute;
+        top: 50%;
+        right: 0.5%;
+      }
+
+      .zest-slide #btnPrev, .zest-slide #btnNext{
+        background-color: #333;
+        color: #fff;
+        padding: 1% 2%;
+      }
+
+    </style>
+
   </head>
 
   <body id="page-top">
@@ -76,15 +115,102 @@
                
                 <h3><i class="fa fa-facebook mb-3 sr-contact"> &nbsp;&nbsp;&nbsp; </i>Kyline Merchants</h3>
                 <div>
-                  <p>Consectetur adipisicing elit. Eligendi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.</p>
+                  <div id="zestSlide1" class="zest-slide">
+                    <button id="btnPrev" onclick="prev('1')" class="btn btn-primary"> Prev </button>
+                    <button id="btnNext" onclick="next('1')" class="btn btn-primary"> Next </button>
+
+                    <div id="accordionContent1" class="show accordionContent">
+                      <div class="numbertext">1 / 3: Client Name and Review</div>
+                        <img src="img/c1a.jpg">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                    <div id="accordionContent2" class="hide accordionContent">
+                      <div class="numbertext">2 / 3: Quick description of client</div>
+                        <img src="img/c1b.png">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                    <div id="accordionContent3" class="hide accordionContent">
+                      <div class="numbertext">3 / 3: 3 – 5 bullet point growth metrics</div>
+                        <img src="img/c1c.jpg">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                  </div>
                 </div>
                 <h3><i class="fa fa-twitter mb-3 sr-contact"> &nbsp;&nbsp;&nbsp; </i>Social Shooters</h3>
                 <div>
-                  <p>Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.</p>
+                  <div id="zestSlide2" class="zest-slide">
+                    <button id="btnPrev" onclick="prev('2')" class="btn btn-primary"> Prev </button>
+                    <button id="btnNext" onclick="next('2')" class="btn btn-primary"> Next </button>
+
+                    <div id="accordionContent1" class="show accordionContent">
+                      <div class="numbertext">1 / 3: Client Name and Review</div>
+                        <img src="img/c1a.jpg">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                    <div id="accordionContent2" class="hide accordionContent">
+                      <div class="numbertext">2 / 3: Quick description of client</div>
+                        <img src="img/c1b.png">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                    <div id="accordionContent3" class="hide accordionContent">
+                      <div class="numbertext">3 / 3: 3 – 5 bullet point growth metrics</div>
+                        <img src="img/c1c.jpg">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                  </div>
                 </div>
                 <h3><i class="fa fa-video-camera mb-3 sr-contact"> &nbsp;&nbsp;&nbsp; </i>Best Learners Academy</h3>
                 <div>
-                  <p>Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.</p>
+                  <div id="zestSlide3" class="zest-slide">
+                    <button id="btnPrev" onclick="prev('3')" class="btn btn-primary"> Prev </button>
+                    <button id="btnNext" onclick="next('3')" class="btn btn-primary"> Next </button>
+
+                    <div id="accordionContent1" class="show accordionContent">
+                      <div class="numbertext">1 / 3: Client Name and Review</div>
+                        <img src="img/c1a.jpg">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                    <div id="accordionContent2" class="hide accordionContent">
+                      <div class="numbertext">2 / 3: Quick description of client</div>
+                        <img src="img/c1b.png">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                    <div id="accordionContent3" class="hide accordionContent">
+                      <div class="numbertext">3 / 3: 3 – 5 bullet point growth metrics</div>
+                        <img src="img/c1c.jpg">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                  </div>
                 </div>
                 
               </div>
@@ -104,11 +230,69 @@
                
                 <h3><i class="fa fa-facebook mb-3 sr-contact"> &nbsp;&nbsp;&nbsp; </i>Judith Stores</h3>
                 <div>
-                  <p>Consectetur adipisicing elit. Eligendi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.</p>
+                  <div id="zestSlide4" class="zest-slide">
+                    <button id="btnPrev" onclick="prev('4')" class="btn btn-primary"> Prev </button>
+                    <button id="btnNext" onclick="next('4')" class="btn btn-primary"> Next </button>
+
+                    <div id="accordionContent1" class="show accordionContent">
+                      <div class="numbertext">1 / 3: Client Name and Review</div>
+                        <img src="img/c1a.jpg">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                    <div id="accordionContent2" class="hide accordionContent">
+                      <div class="numbertext">2 / 3: Quick description of client</div>
+                        <img src="img/c1b.png">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                    <div id="accordionContent3" class="hide accordionContent">
+                      <div class="numbertext">3 / 3: 3 – 5 bullet point growth metrics</div>
+                        <img src="img/c1c.jpg">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                  </div>
                 </div>
                 <h3><i class="fa fa-twitter mb-3 sr-contact"> &nbsp;&nbsp;&nbsp; </i>Kyshel Associaltes</h3>
                 <div>
-                  <p>Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.</p>
+                  <div id="zestSlide5" class="zest-slide">
+                    <button id="btnPrev" onclick="prev('5')" class="btn btn-primary"> Prev </button>
+                    <button id="btnNext" onclick="next('5')" class="btn btn-primary"> Next </button>
+
+                    <div id="accordionContent1" class="show accordionContent">
+                      <div class="numbertext">1 / 3: Client Name and Review</div>
+                        <img src="img/c1a.jpg">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                    <div id="accordionContent2" class="hide accordionContent">
+                      <div class="numbertext">2 / 3: Quick description of client</div>
+                        <img src="img/c1b.png">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                    <div id="accordionContent3" class="hide accordionContent">
+                      <div class="numbertext">3 / 3: 3 – 5 bullet point growth metrics</div>
+                        <img src="img/c1c.jpg">
+                        <div class="text">
+                          Endi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.
+                        </div>
+                    </div>
+
+                  </div>
                 </div>
                 <h3><i class="fa fa-video-camera mb-3 sr-contact"> &nbsp;&nbsp;&nbsp; </i>Legal Buddy</h3>
                 <div>
@@ -186,6 +370,50 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+
+    <script>
+
+    let slide = 0;
+
+    window.onload = changeContent('1');
+
+    function changeContent(sliderNo){
+      
+      let zestSlide = document.getElementById('zestSlide' + sliderNo);
+      let accordionContent = zestSlide.querySelectorAll('.accordionContent');
+      
+      for (var i = 0; i < accordionContent.length; i++) {
+        accordionContent[i].className = 'hide accordionContent';
+      }
+
+      if (slide > 2) {
+        slide = 0;
+      }
+
+      if (slide < 0) {
+        slide = 2;
+      }
+
+      accordionContent[slide].className = 'show accordionContent';
+        
+    }
+
+    function prev(sliderNo){
+
+      slide--;
+      changeContent(sliderNo);
+
+    }
+
+    function next(sliderNo){
+
+      slide++;
+      changeContent(sliderNo);
+
+    }
+
+  </script>
+
 
 
   </body>
