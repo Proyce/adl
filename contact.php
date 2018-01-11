@@ -9,7 +9,7 @@
     if (
       new Email (
         $_POST['email'], 
-        'arinzezest@gmail.com',
+        'contact@adlineup.com',
         $_POST['name'],
         $_POST['title'], 
         $_POST['message']
@@ -18,7 +18,7 @@
       $statusMsg = 'Message sent. Thank you.';
 
       new Email (
-        'arinzezest@gmail.com',
+        'contact@adlineup.com',
         $_POST['email'],
         $_POST['name'],
         'A copy of your message', 
