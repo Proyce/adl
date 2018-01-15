@@ -1,36 +1,4 @@
-<?php
-
-  require_once('functions/functions.php');
-  require_once('model/Email.php');
-
-  $statusMsg = '';
-
-  if (isset($_POST['sendMail'])) {
-    if (
-      new Email (
-        $_POST['email'], 
-        'contact@adlineup.com',
-        $_POST['name'],
-        $_POST['title'], 
-        $_POST['message']
-      ) 
-    ) {
-      $statusMsg = 'Message sent. Thank you.';
-
-      new Email (
-        'contact@adlineup.com',
-        $_POST['email'],
-        $_POST['name'],
-        'A copy of your message', 
-        $_POST['message']
-      );
-
-    }else{
-      $statusMsg = 'Error! Message NOT sent.';
-    }
-  }
-
-?>
+<?php include_once('contact-form.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +34,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.php">AdLineup</a>
+        <a class="navbar-brand js-scroll-trigger" href="index.php"><img src="img/adlineup.png" id="logo"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -76,8 +44,9 @@
               <a class="nav-link js-scroll-trigger" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="portfolio.html">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="portfolio.php">Portfolio</a>
             </li>
+            
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#">Contact Us</a>
             </li>
@@ -94,7 +63,9 @@
         <div class="col-lg-8 mx-auto text-center">
           <div class="contactFormFormWrapper">
             <form id="contactForm" action="" method="post">
-                <span class="text-success"><?php echo $statusMsg; ?></span>
+              
+                <?php echo $statusMsg; ?>
+
                 <h3>Get in Touch With Us</h3>
                 <p>Fill in your details and "Send"</p>
                 <fieldset>
@@ -107,6 +78,8 @@
                 <fieldset>
                     <input name="title" placeholder="Message title" type="text" tabindex="3" autofocus>
                 </fieldset>
+
+                <input type="text" name="gotcha" class="gotcha" value="" style="display: none;">
                 
                 <fieldset>
                     <textarea name="message" placeholder="Type your message here...." tabindex="4" required></textarea>

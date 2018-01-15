@@ -15,13 +15,12 @@
 }
 
 
+*, body{
+  font-family: "Roboto Condense";
+}
 
 h1, h2, h3, h4, h5 h6{
 	font-family: Roboto;
-}
-
-body{
-	font-family: "Roboto Condense";
 }
 
 .bg-dusty-green{
@@ -50,7 +49,7 @@ section {
 
 
 /*
-      Other Features
+      Modify Accordion
 ------------------------------------- */
 .accordion-container{
   background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
@@ -58,9 +57,11 @@ section {
   border-radius: 2.5%;
 }
 
-#services .container, #services .row{
-  padding: 0;
+.accordion-container {
+  width: 100%;
+  margin: auto;
 }
+
 
 .ziehharmonika{
   width: 100%;
@@ -70,6 +71,19 @@ section {
   max-width: 100%;
 }
 
+.accordion-container h3 {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+/*
+      Other
+------------------------------------- */
+#services .container, #services .row{
+  padding: 0;
+}
+
+
 
 
 
@@ -77,8 +91,19 @@ section {
 /*
 			Homepage
 ----------------------------------- */
+img#logo{
+  max-height: 50px;
+  border-radius: 10%;
+  background-color: rgb(222, 106, 83);
+}
 
+.sr-contact, .sr-contact{
+  
+}
 
+#footerPhoneNumber, #footerEmail{
+  display: none;
+}
 
 
 
@@ -196,7 +221,6 @@ section {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 14px;
   line-height: 30px;
@@ -213,7 +237,7 @@ section {
 #contactForm input[type="url"],
 #contactForm textarea,
 #contactForm button[type="submit"] {
-  font: 400 16px/20px "Roboto", Helvetica, Arial, sans-serif;
+  font: 400 16px/20px;
 }
 
 #contactForm {
