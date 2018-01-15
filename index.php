@@ -61,7 +61,7 @@
           </div>
           <div class="col-lg-8 mx-auto">
             <p class="mb-5">Here in AdLineup we believe in end results to speak for us and show what we are good at. We are here to take your business, products and services to your target clients...</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Find Out More</a>
           </div>
         </div>
       </div>

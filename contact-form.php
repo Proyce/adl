@@ -13,7 +13,7 @@
 
       $mailer->sendMail (
         $_POST['email'], 
-        'contact@adlineup.com',
+        'ad@adlineup.com',
         $_POST['name'],
         $_POST['title'], 
         $_POST['message']
@@ -24,7 +24,7 @@
       $statusMsg = '<p class="text-danger">Message Sent. Thank You!</p>';
 
       $mailer->sendMail (
-        'contact@adlineup.com',
+        'ad@adlineup.com',
         $_POST['email'],
         $_POST['name'],
         'A copy of your message', 
